@@ -1,0 +1,24 @@
+<form id="contact-form">
+  <input type="text" name="name" placeholder="Ваше имя" required>
+  <input type="tel" name="phone" placeholder="Телефон" required>
+  <select name="service">
+    <option value="buy">Покупка недвижимости</option>
+    <option value="sell">Продажа недвижимости</option>
+    <option value="consult">Консультация</option>
+  </select>
+  <button type="submit" class="gold-button">Отправить заявку</button>
+</form>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const message = `Новая заявка от ${form.name.value}\n`
+                   + `Телефон: ${form.phone.value}\n`
+                   + `Услуга: ${form.service.value}`;
+    
+    fetch(`https://api.telegram.org/botВАШ_ТОКЕН/sendMessage?chat_id=ВАШ_CHAT_ID&text=${encodeURIComponent(message)}`);
+    alert('Заявка отправлена! Я свяжусь с вами в ближайшее время.');
+    form.reset();
+  });
+</script>
