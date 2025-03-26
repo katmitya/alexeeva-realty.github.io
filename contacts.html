@@ -17,7 +17,7 @@
                    + `Телефон: ${form.phone.value}\n`
                    + `Услуга: ${form.service.value}`;
     
-    fetch(`https://api.telegram.org/botВАШ_ТОКЕН/sendMessage?chat_id=ВАШ_CHAT_ID&text=${encodeURIComponent(message)}`);
+    fetch(`https://api.telegram.org/7694919427:AAESZhrbX8yvAhakQq9aHZhBRdQP1kZ79Ig/sendMessage?chat_id=@alexeeva_realty&text=${encodeURIComponent(message)}`);
     alert('Заявка отправлена! Я свяжусь с вами в ближайшее время.');
     form.reset();
   });
