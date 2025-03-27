@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Екатерина Алексеева | [Название страницы]</title>
+    <title>Екатерина Алексеева | Контакты</title>
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -21,59 +21,55 @@
         </nav>
     </header>
 
-    <!-- Уникальный контент страницы -->
-    
+    <main class="contact-content">
+        <section class="contact-form">
+            <h2>Свяжитесь со мной</h2>
+            
+            <form id="tgForm">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="Телефон" required>
+                <select name="service">
+                    <option value="buy">Покупка недвижимости</option>
+                    <option value="sell">Продажа недвижимости</option>
+                    <option value="consult">Консультация</option>
+                </select>
+                <button type="submit" class="gold-button">
+                    <i class="fab fa-telegram"></i> Отправить заявку
+                </button>
+            </form>
+
+            <div class="direct-contacts">
+                <p><i class="fas fa-phone"></i> +7 964 999-91-44</p>
+                <p><i class="fas fa-envelope"></i> rbrsar@yandex.ru</p>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>© 2023 Екатерина Алексеева. Все права защищены</p>
+        <p>© 2025 Екатерина Алексеева. Все права защищены</p>
         <div class="social-links">
             <a href="https://t.me/alexeeva_realty"><i class="fab fa-telegram"></i></a>
             <a href="https://wa.me/79649999144"><i class="fab fa-whatsapp"></i></a>
             <a href="https://vk.com/your_profile"><i class="fab fa-vk"></i></a>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('tgForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const message = `Новая заявка от ${form.name.value}\n`
+                         + `Телефон: ${form.phone.value}\n`
+                         + `Услуга: ${form.service.options[form.service.selectedIndex].text}`;
+            
+            fetch(`https://api.telegram.org/botВАШ_ТОКЕН/sendMessage?chat_id=ВАШ_CHAT_ID&text=${encodeURIComponent(message)}`)
+                .then(() => {
+                    alert('Заявка отправлена! Я свяжусь с вами в течение 15 минут.');
+                    form.reset();
+                })
+                .catch(() => alert('Ошибка отправки. Позвоните мне: +7 964 999-91-44'));
+        });
+    </script>
 </body>
 </html>
-
-<section class="contact-form">
-    <h2>Быстрая консультация</h2>
-    
-    <form id="tgForm">
-        <input type="text" name="name" placeholder="Ваше имя" required>
-        <input type="tel" name="phone" placeholder="Телефон" required>
-        <select name="service">
-            <option value="buy">Покупка недвижимости</option>
-            <option value="sell">Продажа недвижимости</option>
-            <option value="consult">Консультация</option>
-        </select>
-        <button type="submit" class="gold-button">
-            <i class="fab fa-telegram"></i> Отправить заявку
-        </button>
-    </form>
-
-    <div class="messenger-buttons">
-        <a href="https://wa.me/79649999144" class="whatsapp-btn">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-        <a href="https://t.me/alexeeva_realty" class="telegram-btn">
-            <i class="fab fa-telegram"></i> Telegram
-        </a>
-    </div>
-</section>
-
-<script>
-    document.getElementById('tgForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const form = e.target;
-        const message = `Новая заявка от ${form.name.value}\n`
-                     + `Телефон: ${form.phone.value}\n`
-                     + `Услуга: ${form.service.options[form.service.selectedIndex].text}`;
-        
-        fetch(`https://api.telegram.org/botВАШ_ТОКЕН/sendMessage?chat_id=ВАШ_CHAT_ID&text=${encodeURIComponent(message)}`)
-            .then(() => {
-                alert('Заявка отправлена! Я свяжусь с вами в течение 15 минут.');
-                form.reset();
-            })
-            .catch(() => alert('Ошибка отправки. Позвоните мне: +7 964 999-91-44'));
-    });
-</script>
