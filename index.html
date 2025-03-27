@@ -3,108 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Екатерина Алексеева | Профессиональный риэлтор в Саратове</title>
+    <title>Екатерина Алексеева | Риэлтор в Саратове</title>
     <link rel="stylesheet" href="styles/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <!-- Шапка -->
     <header class="header">
         <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-                    <span class="logo-name">Екатерина Алексеева</span>
-                    <span class="logo-subtitle">Профессиональный риэлтор</span>
+            <a href="index.html" class="logo">
+                <span>Екатерина Алексеева</span>
+                <small>Профессиональный риэлтор</small>
+            </a>
+            
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav">
+                <a href="about.html">Обо мне</a>
+                <a href="services.html">Услуги</a>
+                <a href="reviews.html">Отзывы</a>
+                <a href="contacts.html" class="cta-btn">
+                    <i class="fas fa-phone-alt"></i> Консультация
                 </a>
-                
-                <div class="nav-links">
-                    <a href="about.html">Обо мне</a>
-                    <a href="services.html">Услуги</a>
-                    <a href="reviews.html">Отзывы</a>
-                    <a href="contacts.html" class="cta-button">
-                        <i class="fas fa-phone-alt"></i> Консультация
-                    </a>
-                </div>
-                
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
             </nav>
         </div>
     </header>
 
-    <!-- Герой-секция -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content animate__animated animate__fadeInLeft">
-                <h1>Надёжные сделки с недвижимостью в Саратове</h1>
-                <p class="subtitle">13 лет опыта • 1000+ успешных сделок • Юридическая гарантия</p>
-                
-                <div class="cta-buttons">
-                    <a href="contacts.html" class="main-button">
-                        <i class="fas fa-paper-plane"></i> Бесплатная консультация
-                    </a>
-                    <a href="tel:+79649999144" class="secondary-button">
-                        <i class="fas fa-phone"></i> +7 964 999-91-44
-                    </a>
-                </div>
-            </div>
-            
-            <div class="hero-image animate__animated animate__fadeInRight">
-                <img src="images/portrait.jpg" alt="Екатерина Алексеева" class="profile-image">
-                <div class="image-badge animate__animated animate__pulse animate__infinite">
-                    <i class="fas fa-award"></i> Топ-риэлтор 2024
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Статистика -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-container">
-                <div class="stat-item animate__animated animate__fadeInUp">
-                    <div class="stat-icon">
-                        <i class="fas fa-handshake"></i>
+    <!-- Основной контент -->
+    <main>
+        <!-- Герой-секция -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Надёжные сделки с недвижимостью в Саратове</h1>
+                    <p class="subtitle">13 лет опыта • 1000+ сделок • Работа по договору</p>
+                    
+                    <div class="hero-btns">
+                        <a href="contacts.html" class="main-btn">
+                            <i class="fas fa-paper-plane"></i> Бесплатная консультация
+                        </a>
+                        <a href="tel:+79649999144" class="secondary-btn">
+                            <i class="fas fa-phone"></i> +7 964 999-91-44
+                        </a>
                     </div>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="images/portrait.jpg" alt="Екатерина Алексеева">
+                    <div class="badge">
+                        <i class="fas fa-award"></i> Топ-риэлтор 2024
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Статистика -->
+        <section class="stats">
+            <div class="container">
+                <div class="stat-card">
+                    <i class="fas fa-handshake stat-icon"></i>
                     <span class="number">1000+</span>
                     <p>успешных сделок</p>
                 </div>
                 
-                <div class="stat-item animate__animated animate__fadeInUp animate__delay-1s">
-                    <div class="stat-icon">
-                        <i class="fas fa-ruble-sign"></i>
-                    </div>
+                <div class="stat-card">
+                    <i class="fas fa-ruble-sign stat-icon"></i>
                     <span class="number">50+</span>
                     <p>млн рублей сэкономлено</p>
                 </div>
                 
-                <div class="stat-item animate__animated animate__fadeInUp animate__delay-2s">
-                    <div class="stat-icon">
-                        <i class="fas fa-calendar-check"></i>
-                    </div>
-                    <span class="number">&lt;45</span>
+                <div class="stat-card">
+                    <i class="fas fa-calendar-check stat-icon"></i>
+                    <span class="number"><45</span>
                     <p>дней - средний срок продажи</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Подвал -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="legal-info">
-                    <p>ИП Алексеева Екатерина Алексеевна</p>
-                    <p>ИНН 644111270481</p>
-                    <p>© 2025 Все права защищены</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <a href="tel:+79649999144"><i class="fas fa-phone"></i> +7 964 999-91-44</a>
+                    <a href="mailto:rbrsar@yandex.ru"><i class="fas fa-envelope"></i> rbrsar@yandex.ru</a>
                 </div>
+                
+                <div class="footer-col">
+                    <h3>Меню</h3>
+                    <a href="about.html">Обо мне</a>
+                    <a href="services.html">Услуги</a>
+                    <a href="reviews.html">Отзывы</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Реквизиты</h3>
+                    <p>ИП Алексеева Е.А.</p>
+                    <p>ИНН 644111270481</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 Все права защищены</p>
                 <div class="social-links">
-                    <a href="https://t.me/alexeeva_realty"><i class="fab fa-telegram"></i></a>
                     <a href="https://wa.me/79649999144"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://vk.com/your_profile"><i class="fab fa-vk"></i></a>
+                    <a href="https://t.me/alexeeva_realty"><i class="fab fa-telegram"></i></a>
+                    <a href="viber://chat?number=79649999144"><i class="fab fa-viber"></i></a>
                 </div>
             </div>
         </div>
@@ -112,25 +121,14 @@
 
     <script>
         // Мобильное меню
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav');
         
-        // Анимация при скролле
-        document.addEventListener('DOMContentLoaded', () => {
-            const animateElements = document.querySelectorAll('.animate__animated');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate__fadeIn');
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            animateElements.forEach(el => {
-                observer.observe(el);
-            });
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            menuToggle.innerHTML = nav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
         });
     </script>
 </body>
