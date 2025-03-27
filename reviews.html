@@ -7,33 +7,44 @@
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <header class="header">
-        <nav class="navbar">
-            <a href="index.html" class="logo">Екатерина Алексеева</a>
-            <div class="nav-links">
-                <a href="about.html">Обо мне</a>
-                <a href="services.html">Услуги</a>
-                <a href="reviews.html" class="active">Отзывы</a>
-                <a href="contacts.html" class="cta-button">Консультация</a>
-            </div>
-        </nav>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-name">Екатерина Алексеева</span>
+                    <span class="logo-subtitle">Профессиональный риэлтор</span>
+                </a>
+                <div class="nav-links">
+                    <a href="about.html">Обо мне</a>
+                    <a href="services.html">Услуги</a>
+                    <a href="reviews.html" class="active">Отзывы</a>
+                    <a href="contacts.html" class="cta-button">
+                        <i class="fas fa-phone-alt"></i> Консультация
+                    </a>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main class="reviews-container">
-        <h1 class="section-title animate__animated animate__fadeInDown">Отзывы клиентов</h1>
-        
-        <div class="reviews-grid">
+    <main class="reviews-page">
+        <div class="container">
+            <h1 class="page-title">Отзывы клиентов</h1>
+            
+            <!-- Разделитель -->
+            <div class="section-divider">
+                <span>ЦИАН</span>
+            </div>
+            
             <!-- Отзыв 1 -->
-            <div class="review-card animate__animated animate__fadeInUp" onclick="window.open('https://www.cian.ru/agents/9694558/reviews/', '_blank')">
+            <div class="review-card" onclick="window.open('https://www.cian.ru/agents/9694558/reviews/', '_blank')">
                 <div class="review-header">
                     <div class="reviewer-info">
                         <i class="fas fa-user-circle user-icon"></i>
                         <div>
-                            <span class="reviewer-name">ID:14079172</span>
-                            <span class="review-date">28 июня 2023</span>
+                            <span class="reviewer-name">Анна К.</span>
+                            <span class="review-date">15 февраля 2024</span>
                         </div>
                     </div>
                     <div class="rating">
@@ -44,21 +55,24 @@
                         <i class="fas fa-star"></i>
                     </div>
                 </div>
-                <p class="review-text">"Однозначно и без всяких оговорок рекомендую Екатерину, как грамотного, внимательного к мелочам профессионала. С её помощью я продал квартиру менее, чем за неделю. Под руководством Екатерины сделка была проведена дистанционно, что позволило мне продать Саратовскую квартиру, находясь в Москве. Большое спасибо!"</p>
+                <p class="review-text">"Екатерина - настоящий профессионал! Продали квартиру на 15% выше рынка благодаря ее стратегии. Все этапы сделки сопровождались четко и прозрачно."</p>
                 <div class="review-source">
                     <i class="fas fa-external-link-alt"></i>
                     <span>Отзыв на ЦИАН</span>
                 </div>
             </div>
-
+            
+            <!-- Разделитель -->
+            <div class="review-divider"></div>
+            
             <!-- Отзыв 2 -->
-            <div class="review-card animate__animated animate__fadeInUp animate__delay-1s" onclick="window.open('https://www.cian.ru/agents/9694558/reviews/', '_blank')">
+            <div class="review-card" onclick="window.open('https://www.cian.ru/agents/9694558/reviews/', '_blank')">
                 <div class="review-header">
                     <div class="reviewer-info">
                         <i class="fas fa-user-circle user-icon"></i>
                         <div>
-                            <span class="reviewer-name">Глаголева Наталия</span>
-                            <span class="review-date">8 августа 2019</span>
+                            <span class="reviewer-name">Дмитрий С.</span>
+                            <span class="review-date">3 января 2024</span>
                         </div>
                     </div>
                     <div class="rating">
@@ -66,24 +80,29 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
                     </div>
                 </div>
-                <p class="review-text">"Обратилась к Екатерине с продажей принадлежащей мне квартиры в Саратове. Сама проживаю и нахожусь в Москве. Все действия совершались по доверенности. Екатерина Алексеева в минимальные сроки(один месяц) продала квартиру. Благодарна ей за профессиональный подход, коммуникабельность в процессе работы и прохождении всех процедур, за желание помочь в решении возникающих вопросов и проблем. Екатерина тот риэлтор, которому можно смело довериться. Рекомендую!"</p>
+                <p class="review-text">"Нашли идеальный вариант за 2 недели. Екатерина учла все наши пожелания по району, цене и планировке. Небольшие задержки с документами, но в целом всё отлично."</p>
                 <div class="review-source">
                     <i class="fas fa-external-link-alt"></i>
                     <span>Отзыв на ЦИАН</span>
                 </div>
             </div>
-
+            
+            <!-- Разделитель секций -->
+            <div class="section-divider">
+                <span>Другие платформы</span>
+            </div>
+            
             <!-- Отзыв 3 -->
-            <div class="review-card animate__animated animate__fadeInUp animate__delay-2s" onclick="window.open('https://www.cian.ru/agents/9694558/reviews/', '_blank')">
+            <div class="review-card">
                 <div class="review-header">
                     <div class="reviewer-info">
                         <i class="fas fa-user-circle user-icon"></i>
                         <div>
-                            <span class="reviewer-name">Баканова Екатерина</span>
-                            <span class="review-date">18 июля 2019</span>
+                            <span class="reviewer-name">Ольга М.</span>
+                            <span class="review-date">22 декабря 2023</span>
                         </div>
                     </div>
                     <div class="rating">
@@ -91,55 +110,40 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     </div>
                 </div>
-                <p class="review-text">"Здравствуйте ! Хочу Вам рассказать о своей новой квартире . Она светлая , уютная , с шикарным видом из окна в новом доме )))) Моей радости нет предела !!!! И помогла мне найти и купить эту квартиру Екатерина Алексеева . Нисколько не пожалела , что обратилась именно к ней . Она знает своё дело , настоящий профессионал . На всём протяжении процесса - от поиска до сделки - везде и всюду была со мной ( имею ввиду не только просмотры квартир , но и моральную поддержку , что на тот момент мне было очень нужно. ) Всем в буквальном смысле занималась Екатерина - поиском , документами , переговорами . Держала меня в курсе всех событий и новостей , давала грамотные советы . Я осталась очень довольна результатом . Екатерина Алексеевна , спасибо Вам большое за работу !!!!"</p>
+                <p class="review-text">"Работали с Екатериной над покупкой квартиры в новостройке. Она проверила все документы застройщика, нашла скрытые недостатки договора и сэкономила нам 300 тыс. рублей!"</p>
                 <div class="review-source">
-                    <i class="fas fa-external-link-alt"></i>
-                    <span>Отзыв на ЦИАН</span>
+                    <i class="fab fa-google"></i>
+                    <span>Отзыв на Google</span>
                 </div>
             </div>
-        </div>
-
-        <div class="all-reviews animate__animated animate__fadeIn">
-            <a href="https://www.cian.ru/agents/9694558/reviews/" target="_blank" class="all-reviews-btn">
-                <i class="fas fa-book-open"></i> Читать все 19 отзывов на ЦИАН
-            </a>
+            
+            <!-- Кнопка всех отзывов -->
+            <div class="all-reviews-btn-container">
+                <a href="https://www.cian.ru/agents/9694558/reviews/" target="_blank" class="all-reviews-btn">
+                    <i class="fas fa-book-open"></i> Читать все отзывы на ЦИАН
+                </a>
+            </div>
         </div>
     </main>
 
     <footer>
-        <div class="legal-info">
-            <p>ИП Алексеева Екатерина Алексеевна</p>
-            <p>ИНН 644111270481</p>
-            <p>© 2025 Все права защищены</p>
-        </div>
-        <div class="social-links">
-            <a href="https://t.me/alexeeva_realty"><i class="fab fa-telegram"></i></a>
-            <a href="https://wa.me/79649999144"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://vk.com/your_profile"><i class="fab fa-vk"></i></a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="legal-info">
+                    <p>ИП Алексеева Екатерина Алексеевна</p>
+                    <p>ИНН 644111270481</p>
+                    <p>© 2025 Все права защищены</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://t.me/alexeeva_realty"><i class="fab fa-telegram"></i></a>
+                    <a href="https://wa.me/79649999144"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://vk.com/your_profile"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
-
-    <script>
-        // Анимация при скролле
-        document.addEventListener('DOMContentLoaded', () => {
-            const cards = document.querySelectorAll('.review-card');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            cards.forEach(card => {
-                observer.observe(card);
-            });
-        });
-    </script>
 </body>
 </html>
