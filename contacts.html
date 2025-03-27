@@ -34,45 +34,46 @@
 </body>
 </html>
 
-<form id="contact-form">
-  <input type="text" name="name" placeholder="Ваше имя" required>
-  <input type="tel" name="phone" placeholder="Телефон" required>
-  <select name="service">
-    <option value="buy">Покупка недвижимости</option>
-    <option value="sell">Продажа недвижимости</option>
-    <option value="consult">Консультация</option>
-  </select>
-  <button type="submit" class="gold-button">Отправить заявку</button>
-</form>
+<section class="contact-form">
+    <h2>Быстрая консультация</h2>
+    
+    <form id="tgForm">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" name="phone" placeholder="Телефон" required>
+        <select name="service">
+            <option value="buy">Покупка недвижимости</option>
+            <option value="sell">Продажа недвижимости</option>
+            <option value="consult">Консультация</option>
+        </select>
+        <button type="submit" class="gold-button">
+            <i class="fab fa-telegram"></i> Отправить заявку
+        </button>
+    </form>
+
+    <div class="messenger-buttons">
+        <a href="https://wa.me/79649999144" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://t.me/alexeeva_realty" class="telegram-btn">
+            <i class="fab fa-telegram"></i> Telegram
+        </a>
+    </div>
+</section>
 
 <script>
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const message = `Новая заявка от ${form.name.value}\n`
-                   + `Телефон: ${form.phone.value}\n`
-                   + `Услуга: ${form.service.value}`;
-    
-    fetch(`https://api.telegram.org/7694919427:AAESZhrbX8yvAhakQq9aHZhBRdQP1kZ79Ig/sendMessage?chat_id=@alexeeva_realty&text=${encodeURIComponent(message)}`);
-    alert('Заявка отправлена! Я свяжусь с вами в ближайшее время.');
-    form.reset();
-  });
+    document.getElementById('tgForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const form = e.target;
+        const message = `Новая заявка от ${form.name.value}\n`
+                     + `Телефон: ${form.phone.value}\n`
+                     + `Услуга: ${form.service.options[form.service.selectedIndex].text}`;
+        
+        fetch(`https://api.telegram.org/botВАШ_ТОКЕН/sendMessage?chat_id=ВАШ_CHAT_ID&text=${encodeURIComponent(message)}`)
+            .then(() => {
+                alert('Заявка отправлена! Я свяжусь с вами в течение 15 минут.');
+                form.reset();
+            })
+            .catch(() => alert('Ошибка отправки. Позвоните мне: +7 964 999-91-44'));
+    });
 </script>
-
-<!-- Добавьте в contacts.html -->
-<a href="https://wa.me/79649999144" class="whatsapp-button">
-    <i class="fab fa-whatsapp"></i> Написать в WhatsApp
-</a>
-
-<style>
-.whatsapp-button {
-    background: #25D366;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-    font-weight: 700;
-}
-</style>
