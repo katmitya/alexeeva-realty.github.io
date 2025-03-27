@@ -182,3 +182,15 @@ footer {
 .external-link i {
     margin-right: 8px;
 }
+
+
+    /* Стили для юридической информации */
+.legal-info {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.legal-info p {
+    margin: 5px 0;
+}
