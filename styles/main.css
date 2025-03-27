@@ -1,265 +1,191 @@
-/* Основные стили */
-:root {
-    --primary: #1a1a1a;
-    --secondary: #FFD700;
-    --accent: #f5f5f5;
-    --text: #333;
-    --text-light: #777;
-    --white: #ffffff;
-    --shadow: 0 5px 15px rgba(0,0,0,0.1);
+/* Базовые сбросы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    color: var(--text);
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    overflow-x: hidden;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 /* Шапка */
 .header {
-    background: var(--white);
-    box-shadow: var(--shadow);
+    background: #1a1a1a;
+    color: white;
+    padding: 15px 0;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 .logo {
-    display: flex;
-    flex-direction: column;
+    color: #FFD700;
+    font-weight: bold;
     text-decoration: none;
 }
 
-.logo-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary);
+.logo span {
+    display: block;
+    font-size: 1.3rem;
 }
 
-.logo-subtitle {
+.logo small {
     font-size: 0.8rem;
-    color: var(--text-light);
-    margin-top: -5px;
+    color: #ccc;
 }
 
 .nav-links {
     display: flex;
+    gap: 25px;
     align-items: center;
-    gap: 30px;
 }
 
 .nav-links a {
-    color: var(--text);
+    color: white;
     text-decoration: none;
-    font-weight: 500;
     transition: color 0.3s;
-    position: relative;
 }
 
 .nav-links a:hover {
-    color: var(--secondary);
-}
-
-.nav-links a.active {
-    color: var(--secondary);
-    font-weight: 600;
-}
-
-.nav-links a.active::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--secondary);
+    color: #FFD700;
 }
 
 .cta-button {
-    background: var(--secondary);
-    color: var(--primary);
-    padding: 10px 25px;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: all 0.3s;
-    border: none;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    background: #FFD700;
+    color: #000;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(255, 215, 0, 0.3);
-}
-
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: var(--primary);
-    cursor: pointer;
-}
-
-/* Герой-баннер */
+/* Герой-секция */
 .hero {
+    padding: 60px 0;
+    background: #f9f9f9;
+}
+
+.hero .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 80px 5%;
-    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
-    position: relative;
-    overflow: hidden;
+    gap: 40px;
 }
 
 .hero-content {
-    max-width: 600px;
-    z-index: 2;
+    flex: 1;
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
     line-height: 1.2;
-    color: var(--primary);
 }
 
 .subtitle {
-    font-size: 1.1rem;
-    color: var(--text-light);
-
-/* Стили для конкретных страниц */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 5%;
-    background: linear-gradient(135deg, #f5f5f5 0%, #e9e9e9 100%);
-}
-
-.hero-text h1 {
-    font-size: 2.5rem;
-    color: var(--primary);
+    color: #666;
+    margin-bottom: 25px;
 }
 
 .main-button {
-    background: var(--secondary);
-    color: var(--primary);
-    padding: 15px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 700;
     display: inline-block;
-    margin-top: 20px;
-    transition: 0.3s;
+    background: #FFD700;
+    color: #000;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
 }
 
 .hero-image {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid var(--secondary);
-}
-
-.stats {
-    display: flex;
-    justify-content: space-around;
-    padding: 80px 5%;
-    background: var(--primary);
-    color: white;
+    flex: 1;
     text-align: center;
 }
 
-.number {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--secondary);
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 30px;
-    background: white;
+.hero-image img {
+    max-width: 100%;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+/* Статистика */
+.stats {
+    background: #1a1a1a;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.stats .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat-item {
+    padding: 0 15px;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 5px;
+}
+
+/* Подвал */
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contacts i {
+    margin-right: 10px;
+    color: #FFD700;
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
-    .navbar {
+    .hero .container {
         flex-direction: column;
     }
     
-    .nav-links {
-        margin-top: 20px;
+    .stats .container {
+        flex-direction: column;
+        gap: 30px;
     }
     
-    .hero {
+    .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
     }
-    
-    .hero-image {
-        width: 250px;
-        height: 250px;
-       
-/* Стили для отзывов с ЦИАН */
-.cian-reviews {
-    margin-top: 50px;
-    padding: 30px;
-    background: #f9f9f9;
-    border-radius: 10px;
 }
-
-.review-embed {
-    position: relative;
-    margin-top: 20px;
-}
-
-.external-link {
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.external-link:hover {
-    color: var(--secondary);
-}
-
-.external-link i {
-    margin-right: 8px;
-}
-
-
-    /* Стили для юридической информации */
-.legal-info {
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-    line-height: 1.4;
-}
-
-.legal-info p {
-    margin: 5px 0;
-}
-
-
-   
