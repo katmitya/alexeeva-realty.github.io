@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Екатерина Алексеева | Профессиональный риэлтор в Саратове</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <!-- Шапка -->
@@ -13,8 +15,8 @@
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
-                    <span>Екатерина Алексеева</span>
-                    <small>Профессиональный риэлтор</small>
+                    <span class="logo-name">Екатерина Алексеева</span>
+                    <span class="logo-subtitle">Профессиональный риэлтор</span>
                 </a>
                 
                 <div class="nav-links">
@@ -25,46 +27,70 @@
                         <i class="fas fa-phone-alt"></i> Консультация
                     </a>
                 </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
             </nav>
         </div>
     </header>
 
-    <!-- Основной контент -->
-    <main>
-        <!-- Герой-секция -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Надёжные сделки с недвижимостью в Саратове</h1>
-                    <p class="subtitle">13 лет опыта • 1000+ сделок • Работа по договору</p>
+    <!-- Герой-секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content animate__animated animate__fadeInLeft">
+                <h1>Надёжные сделки с недвижимостью в Саратове</h1>
+                <p class="subtitle">13 лет опыта • 1000+ успешных сделок • Юридическая гарантия</p>
+                
+                <div class="cta-buttons">
                     <a href="contacts.html" class="main-button">
                         <i class="fas fa-paper-plane"></i> Бесплатная консультация
                     </a>
-                </div>
-                <div class="hero-image">
-                    <img src="images/portrait.jpg" alt="Екатерина Алексеева">
+                    <a href="tel:+79649999144" class="secondary-button">
+                        <i class="fas fa-phone"></i> +7 964 999-91-44
+                    </a>
                 </div>
             </div>
-        </section>
+            
+            <div class="hero-image animate__animated animate__fadeInRight">
+                <img src="images/portrait.jpg" alt="Екатерина Алексеева" class="profile-image">
+                <div class="image-badge animate__animated animate__pulse animate__infinite">
+                    <i class="fas fa-award"></i> Топ-риэлтор 2024
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Статистика -->
-        <section class="stats">
-            <div class="container">
-                <div class="stat-item">
-                    <div class="stat-number">1000+</div>
+    <!-- Статистика -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item animate__animated animate__fadeInUp">
+                    <div class="stat-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <span class="number">1000+</span>
                     <p>успешных сделок</p>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">50+</div>
+                
+                <div class="stat-item animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="stat-icon">
+                        <i class="fas fa-ruble-sign"></i>
+                    </div>
+                    <span class="number">50+</span>
                     <p>млн рублей сэкономлено</p>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number"><45</div>
+                
+                <div class="stat-item animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <span class="number">&lt;45</span>
                     <p>дней - средний срок продажи</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Подвал -->
     <footer>
@@ -75,12 +101,37 @@
                     <p>ИНН 644111270481</p>
                     <p>© 2025 Все права защищены</p>
                 </div>
-                <div class="contacts">
-                    <a href="tel:+79649999144"><i class="fas fa-phone"></i> +7 964 999-91-44</a>
-                    <a href="mailto:rbrsar@yandex.ru"><i class="fas fa-envelope"></i> rbrsar@yandex.ru</a>
+                <div class="social-links">
+                    <a href="https://t.me/alexeeva_realty"><i class="fab fa-telegram"></i></a>
+                    <a href="https://wa.me/79649999144"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://vk.com/your_profile"><i class="fab fa-vk"></i></a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Мобильное меню
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Анимация при скролле
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate__animated');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__fadeIn');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>
